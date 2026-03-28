@@ -52,6 +52,4 @@ This template can be used for:
 Fullstack Developer.
 
 📄 License
-<img width="945" height="395" alt="{692877CF-2288-4513-83CA-754A3B47F6C8}" src="https://github.com/user-attachments/assets/da4fcbda-1925-41a3-88fe-5d99350d00b6" />
-<img width="954" height="439" alt="{43F48F7B-3C31-4147-9BDB-5363E25B09FF}" src="https://github.com/user-attachments/assets/b5c7240a-8506-48a5-9724-55dbb3a7fa1f" />
 Free to use for personal and educational purposes.
