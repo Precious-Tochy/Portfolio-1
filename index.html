@@ -16,39 +16,13 @@
 </head>
 
 <body>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-          document.body.classList.add("scrolled");
-        } else {
-          document.body.classList.remove("scrolled");
-        }
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const navbar = document.getElementById("ral");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
-    });
-  </script>
-
-
-
-  <section class="">
+ <section>
     <nav class="navbar navbar-expand-lg" id="ral">
       <div class="container-fluid">
-        <div class="cc">B</div>
-        <a class="navbar-brand" href="#" id="glo">Belly.</a>
+       <div class="logo-group">
+  <div class="cc">B</div>
+  <a class="navbar-brand" id="glo">Belly.</a>
+</div>
         <button class="navbar-toggler" id="uu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" id="pp"></span>
@@ -210,19 +184,12 @@
 <i class="ri-carousel-view"></i>
 <i class="ri-slideshow-view"></i> -->
 
-      <style>
-        .craft:hover {
-          transform: scale(1.02);
-          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-        }
-      </style>
-
-
+      
 
 
 
       <div class="all">
-        <div class="craft  ">
+        <div class="craft">
           <div class="small-c">
             <i class="ri-slideshow-view"></i>
           </div>
@@ -301,7 +268,7 @@
                 Download CV
               </div>
 
-              <div class="sick">
+              <div class="icon-circle">
 
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#0a0a0a" class="bi bi-arrow-right"
                   viewBox="0 0 16 16">
@@ -324,23 +291,7 @@
       <h2 class="slide-in">Exploring the Tools</h2>
       <h3 class="slide-in">Behind My Designs</h3>
     </div>
-    <script>
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.slide-in').forEach(el => {
-        observer.observe(el);
-      });
-    </script>
+    
 
     <div class="poly" id="mj">
       <div class="fig">
@@ -555,23 +506,7 @@
       <p class="good-in">Education & Work</p>
       <h2 class="good-in">My <span>Academic and <br>Professional</span> Journey</h2>
     </div>
-    <script>
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.good-in').forEach(el => {
-        observer.observe(el);
-      });
-    </script>
+    
     <div class="gel">
       <div class="work">
         <div class="cap">
@@ -1025,8 +960,8 @@
               Submit
 
             </div>
-
-            <div class="sick">
+     
+            <div class="icon-circle">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                 class="bi bi-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -1040,26 +975,14 @@
       </div>
     </div>
 
-
-
-
-
-
-
-
-    <div class="impal">
+   <div class="impal">
       <div class="client" id="testimonials">
         <p>Clients Testimonials</p>
         <h1>The Impact of My Work:</h1>
         <h2>Client Testimonials</h2>
         <div>
 
-
-
-
-
-
-          <div class="siza" aria-label="Example slider">
+    <div class="siza" aria-label="Example slider">
             <div class="viewport">
               <div class="track" id="track">
                 <!-- Add as many cards as you like -->
@@ -1194,7 +1117,7 @@
                   </div>
                 </div>
               </div>
-
+              
 
               <div class="controls">
                 <button class="btn1" id="prev" aria-label="Previous slide">
@@ -1219,46 +1142,6 @@
       </div>
     </div>
     </div>
-
-
-
-
-    <script>
-      const track = document.getElementById('track');
-      const prev = document.getElementById('prev');
-      const next = document.getElementById('next');
-
-      const cardWidth = 600 + 20; // card width + gap
-      const totalCards = track.children.length;
-      const visibleCards = 3;
-      const maxIndex = totalCards - visibleCards;
-
-      let index = 0;
-
-      function updateSlider() {
-        track.style.transform = `translateX(${-index * cardWidth}px)`;
-      }
-
-      next.addEventListener('click', () => {
-        index++;
-        if (index > maxIndex) index = 0;
-        updateSlider();
-      });
-
-      prev.addEventListener('click', () => {
-        index--;
-        if (index < 0) index = maxIndex;
-        updateSlider();
-      });
-    </script>
-
-
-
-
-
-
-
-
 
 
     <div class="dhl">
@@ -1374,31 +1257,33 @@
       </div>
     </div>
 
-    <script>
-      const items = document.querySelectorAll('.accordion-item');
+   <div class="frame">
+  <div class="track">
+    <ul>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Website Designs</li>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Textuals</li>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Dashboard</li>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Visuals</li>
+    </ul>
 
-      items.forEach(item => {
-        item.querySelector('.accordion-header').addEventListener('click', () => {
-          item.classList.toggle('active');
-        });
-      });
-    </script>
-
-
-    <div class="frame">
-      <ul>
-        <li><i class="ri-asterisk"></i></li>
-        <li>Website Design</li>
-        <li><i class="ri-asterisk"></i></li>
-        <li>Textuals</li>
-        <li><i class="ri-asterisk"></i></li>
-        <li>Dashboard</li>
-        <li><i class="ri-asterisk"></i></li>
-        <li>Visuals</li>
-
-      </ul>
-    </div>
-    </div>
+    <!-- duplicate for smooth loop -->
+    <ul>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Website Designs</li>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Textuals</li>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Dashboard</li>
+      <li><i class="ri-asterisk"></i></li>
+      <li>Visuals</li>
+    </ul>
+  </div>
+</div>
+    
 
 
     <div class="let">
@@ -1478,17 +1363,7 @@
     </div>
     </div>
 
-    <script>
-      function submitEmail() {
-        const email = document.getElementById("emailInput").value;
-        if (email) {
-          alert(`Email submitted: ${email}`);
-        } else {
-          alert("Please enter a valid email address.");
-        }
-      }
-
-    </script>
+    
     <div class="tems">
       <h2>Copyright &copy; 2024 <span>belly</span>. All Rights Reserved.</h2>
       <h2>User Terms & Conditions | Privacy Policy</h2>

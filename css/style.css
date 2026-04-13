@@ -57,14 +57,42 @@ body.scrolled {
     background-color: #272727;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.navbar-toggler {
+    margin-left: auto;
+}
+@media (max-width:768px) {
+
+    .container-fluid {
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    button {
+        margin-left: 0 !important;
+        display: flex !important;
+    }
+
+
+    #glo {
+        margin: 0 !important;
+        font-size: 1.8rem !important;
+    }
+    
+
+}
 
 @media (max-width:768px) {
     #glo {
-        margin-right: 0;
+       
         font-size: 2rem;
-        margin-left: -1.2rem;
+        
     }
-
+    
     #clo {
         gap: 0;
     }
@@ -92,8 +120,11 @@ body.scrolled {
     #uu:hover {
         border: #253622;
     }
+    nav{
+    width: 100% !important;
+    border-radius:15px !important;
+    }
 }
-
 
 
 
@@ -162,10 +193,10 @@ button {
     }
 
     .presh .hello h3 {
-        font-size: 20px;
-        width: 100%;
+        font-size: 18px;
+        width: 90%;
         font-weight: 400;
-
+        
     }
 
     .presh .hello h3 br {
@@ -173,8 +204,8 @@ button {
     }
 
     .presh .hello h1 {
-        font-size: 3.5rem;
-        width: 100%;
+        font-size: 2.7rem;
+        
     }
 
     .tochy {
@@ -183,7 +214,102 @@ button {
 
 
 }
+@media (max-width:768px) {
+    .presh {
+        flex-direction: column;
+        gap: 4rem; /* smaller gap to reduce empty space */
+        margin-top: 3rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .hello {
+        width: 95%;
+        
+        text-align: center;
+    }
+
+    .hello h1 {
+        font-size: 2.8rem;
+    }
+
+    .hello h3 {
+        font-size: 1.5rem;
+    }
+
+    .tochy {
+       width: 350px !important;
+        height: auto !important;
+        min-height: 300px !important;
+        margin-top: 2rem !important;
+        position: relative !important;
+    }
+
+    .tochy img {
+        width: 360px !important;
+        height: auto !important;
+    
+        left: 0 !important;
+        bottom: 10%!important;
+    }
+
+    .right {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .view, .my, .hid {
+        width: 90%;
+        max-width: 320px;
+        height: 50px;
+    }
+ 
+    
+
+    .sick {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+    }
+
+    .hire {
+        
+       width: 80px !important;
+       height: 80px !important;
+    }
+
+    .web, .ux {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        margin-top: 1rem;
+    }
+    
+
+
+
+    .cursor svg, .cursor2 svg {
+        width: 20px;
+        height: 20px;
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    /* Preserve svv styling but scale down */
+    .svv {
+        width: 120px;
+        height: 35px;
+    }
+
+    .svv p {
+        font-size: 1rem;
+    }
+}
 .svv {
     position: relative;
     width: 150px;
@@ -549,15 +675,17 @@ button {
     .cursor svg {
         left: 3%;
         transform: rotate(-5deg);
-        bottom: -3%;
+        bottom: -.2%;
     }
 
     .web {
         right: 0;
+        bottom: 7%;
     }
 
     .ux {
         left: 0;
+        margin-bottom: 12px;
     }
 
     .cursor2 svg {
@@ -566,6 +694,112 @@ button {
     }
 
 
+}
+/* iPad specific styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .presh {
+        flex-direction: column;
+        gap: 4rem;
+        margin-top: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hello {
+        width: 90%;
+        text-align: center !important;
+        margin: 0 auto;
+    }
+
+    .hello h1 {
+        font-size: 3rem; /* Slightly smaller than desktop */
+        line-height: 1.2;
+    }
+
+    .hello h3 {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        width: 95%;
+        margin: 1rem auto 2rem auto;
+    }
+
+    .svv {
+        width: 140px;
+        height: 38px;
+        margin-top: 3rem;
+        
+        
+    }
+
+    .svv p {
+        font-size: 1.2rem;
+        vertical-align: middle;
+    }
+
+    .tochy {
+        width: 500px;
+        height: 400px;
+
+        
+    }
+
+    .tochy img {
+        width: 550px;
+        height: auto;
+        position: absolute;
+        left: -3%;
+        top: -30%;
+    }
+
+    .cursor svg, .cursor2 svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .hire {
+        width: 90px;
+        height: 90px;
+        right: -6%;
+    }
+
+    .web, .ux {
+        width: 180px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .web {
+        bottom: 10%;
+        right: -15%;
+    }
+
+    .ux {
+        bottom: -15%;
+        left: -5%;
+    }
+
+    .right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    .view, .my, .hid {
+        width: 300px;
+        height: 50px;
+    }
+
+    .sick {
+        width: 45px;
+        height: 45px;
+    }
+
+    .hid a {
+        font-size: 1rem;
+    }
 }
 
 .app {
@@ -815,9 +1049,32 @@ button {
         justify-content: center;
         align-items: center;
     }
+    .craft{
+        width: 90%;
+    }
 
 }
-
+@media (max-width:1024px){
+    .service{
+        margin: 1rem;
+        margin-top: 2.5rem;
+    
+    }
+    .craft{
+        padding: 15px;
+    }
+    .craft h2{
+        font-size: 1.5rem;
+    }
+    .craft h4{
+        font-size: 16px;
+    }
+    
+}
+.craft:hover {
+          transform: scale(1.02);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
 .large {
     width: 100%;
     height: 550px;
@@ -898,7 +1155,114 @@ button {
         padding-left: 2px;
         margin-top: 1rem;
     }
+    .service{
+        margin: 0 !important;
+        margin-top: 5rem !important;
+    }
+    .design{
+        width: 95% !important;
+    }
+    .design{
+        max-width: 380px !important;
+        
+    }
 }
+@media (max-width:480px){
+    .design{
+        width: 95% !important;
+    }
+    .design img{
+        right: 30% !important;
+    }
+    .circle-container div{
+        font-size: 12px !important;
+    }
+    .large{
+        height: auto !important;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .large {
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .group {
+        flex-direction: column;
+        gap: 3rem;
+        padding-top: 5rem;
+    }
+
+    .design {
+        width: 350px;
+        height: 370px;
+    }
+
+    .design img {
+        width: 480px;
+        height: auto;
+        top: -30% !important;
+        left: -30% !important;
+    }
+
+    .circle-container {
+        top: 55%;
+    }
+
+    /* GENERAL TAG STYLE (scale them down) */
+    .circle-container div {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    /* FIX TAG POSITIONS (bring them closer so they don’t overflow) */
+
+    .tag1 {
+        bottom: 10px;
+        left: 30%;
+    }
+
+    .tag2 {
+        bottom: -20px;
+        left: 10%;
+    }
+
+    .tag3 {
+        bottom: -20px;
+        right: 10%;
+    }
+
+    .tag4 {
+        bottom: -60px;
+        left: 5%;
+    }
+
+    .tag5 {
+        bottom: -70px;
+        left: 40%;
+    }
+
+    .tag6 {
+        bottom: -100px;
+        left: 25%;
+    }
+
+    .tag7 {
+        bottom: -60px;
+        right: 5%;
+    }
+}
+/* @media (max-width:1024px){
+    .group{
+        display: flex !important;
+        flex-direction: column !important;
+        
+    }
+    .large{
+        height: auto;
+    }
+} */
 
 .about {
     display: flex;
@@ -1161,6 +1525,61 @@ button {
     font-size: 2.6rem;
     font-weight: 610;
 }
+@media (max-width:480px){
+    .favourite h2{
+        font-size: 2.1rem;
+    }
+    .favourite h3{
+        font-size: 2rem;
+    }
+    .poly{
+         gap: 8px !important;
+    }
+    .glar h3{
+        font-size:2.3rem  !important;
+    }
+    .glar span{
+        font-size:2.3rem !important ;
+    }
+    .port h5{
+        font-size: 1.2em !important;
+    }
+     .bix{
+            width: 95% !important;
+        }
+}
+@media (max-width:1024px){
+    #mj{
+        display: grid;
+        grid-template-columns: repeat(3,1fr)!important;
+    }
+    .meel{
+        
+        padding: 0 !important;
+        
+    }
+    .prolly{
+        margin:0!important;
+        padding-left: 5px;
+
+    }
+    
+    .square{
+        width: 95% !important;
+        margin-left: 10px;
+    }
+    .square img{
+        width: 100% !important;
+    }
+    .port h5{
+        font-size: 1.15rem !important;
+    }
+    .bix{
+            width: 95% !important;
+        }
+    
+}
+
 
 /* Initial hidden state */
 .slide-in {
@@ -1320,7 +1739,7 @@ button {
 
 }
 
-.square:hover {}
+
 
 .square img {
     width: 530px;
@@ -1580,13 +1999,174 @@ button {
     }
 
     .harm {
-        width: 100%;
+        width: 95%;
     }
 
     .edu {
         margin-top: 3.5rem;
         width: 100%;
     }
+    .edu h2{
+        font-size: 2rem;
+    }
+   
+}
+@media (max-width:1024px){
+    .harm{
+        width: 95%;
+
+    }
+    .clo{
+       gap: 3px ;
+    }
+    nav{
+        border-radius: 20px !important;
+    }
+  
+   }
+   @media (max-width:992px){
+    .tems {
+        flex-direction: column !important;
+        text-align: center !important;
+        height: auto !important;
+        padding: 1rem !important;
+        gap: 0.5rem !important;
+      }
+      .tems h2 {
+        font-size: 0.9rem !important;
+      }
+      .siza {
+        width: 100%;
+        overflow-x: clip;
+      }
+      .card {
+        flex: 0 0 85vw;
+        width: 85vw;
+        height: auto;
+        min-height: 280px;
+        margin-right: 1rem;
+      }
+      
+   }
+   
+   .icon-circle {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+/* ===== PRICING LAYOUT ===== */
+.giving {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ===== CARD BASE ===== */
+.lorem, .morem {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* Default card */
+.lorem {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Highlighted card (Monthly) */
+.morem {
+    background: linear-gradient(135deg, #f4a300, #ff9f1c);
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Hover effect */
+.lorem:hover, .morem:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* ===== TOP SECTION ===== */
+.hour {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 12px;
+    position: relative;
+    background-color: #31452e;
+}
+
+/* Highlighted top */
+.morem .hour {
+    background-color: #253622;
+}
+
+/* Arrow button */
+.ore {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ff9f1c;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== TEXT ===== */
+.hour h1 {
+    font-size: 2.5rem;
+}
+
+.hour span {
+    font-size: 14px;
+}
+
+/* ===== LIST ITEMS ===== */
+.lor, .mor {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.2rem;
+    align-items: center;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* iPad */
+@media (max-width:1024px){
+    .giving{
+        grid-template-columns: repeat(2, 1fr) ;
+        justify-items: center;
+    }
+}
+
+/* Mobile */
+@media(max-width:768px) {
+    .giving {
+        grid-template-columns: 1fr;
+    }
+  
+     
+}
+
+
+/* ===== REMOVE HEIGHT ISSUES ===== */
+.price {
+    height: auto !important;
+}
+
+.lorem, .morem {
+    height: auto !important;
 }
 
 .price {
@@ -1658,6 +2238,7 @@ button {
 
 .hour {
     width: 310px;
+    
     height: 150px;
     background-color: #31452e;
     border-top-left-radius: 10px;
@@ -1666,6 +2247,9 @@ button {
     position: relative;
 
 
+}
+.hour {
+    width: 100%;
 }
 
 .hour h3 {
@@ -2044,6 +2628,60 @@ button {
     }
 }
 
+/* iPad view fix */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem;
+        gap: 2rem;
+    }
+
+    .us {
+        width: 90%;
+        text-align: center;
+    }
+
+    .kit {
+        align-items: center;
+    }
+
+    /* Make form sections sit nicely */
+    .blezz {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .gloe {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .vieww{
+        margin-top: 12rem !important;
+       
+    }
+    
+}
+@media (max-width:1024px){
+    .accordion{
+        width: 95% !important;
+        margin: 1.2rem!important;
+    }
+}
+@media (max-width:768px){
+    .vieww{
+         margin-left: 6rem;
+    }
+   .accordion{
+    margin: 0 !important;
+    width: 100% !important;
+   }
+}
+
 .impal {
     margin-top: 5rem;
     width: 100%;
@@ -2127,15 +2765,7 @@ button {
     color: #464545;
 }
 
-.pic {
-    /* width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #dbd8d8;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-}
+
 
 .pic img {
     width: 50px;
@@ -2424,53 +3054,48 @@ button {
 
 .frame {
     width: 100%;
-    height: 70px;
     background-color: #f28c28;
+    overflow: hidden;
+}
 
+.frame .track {
+    display: flex;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+}
+.frame .track:hover {
+    animation-play-state: paused;
 }
 
 .frame ul {
-    list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-self: center;
-    line-height: 70px;
+    align-items: center;
+    gap: 2rem;
+    padding: 10px;
+    margin: 0;
+}
+
+.frame ul li {
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .frame ul li i {
     font-size: 2rem;
-    font-weight: normal;
-
 }
 
-@media (max-width:768px) {
-    .frame ul li {
-        font-size: 17px !important;
-        padding-right: .5em;
+/* animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
-
-    .frame ul li i {
-        font-size: 18px;
-    }
-
-    .frame ul {
-        width: 100% !important;
-        justify-content: flex-start;
-        padding: 0;
-        line-height: 50px;
-    }
-
-    .frame {
-        height: 50px;
+    100% {
+        transform: translateX(-50%);
     }
 }
 
-
-.frame ul li {
-    font-size: 2.2rem;
-    font-weight: 620;
-}
 
 .let {
     margin-top: 4rem;
@@ -2513,6 +3138,22 @@ button {
     }
 
 }
+@media (max-width:1024px) {
+    .let{
+        margin: 1rem;
+        margin-top: 3rem;
+    }
+    .latest{
+        margin: 1rem !important;
+        gap: 0 !important;
+    }
+    .email-wrapper{
+        width: 85% !important;
+
+    }
+    
+    }
+
 
 .let span {
     color: #f4a300;
@@ -2553,8 +3194,28 @@ button {
     display: flex;
     flex-direction: row;
     gap: 6px;
-
-    align-items: center;
+     align-items: center;
+}
+@media (max-width:768px){
+    .latest{
+        max-width:93% !important;
+    
+    }
+    
+    .gloe input{
+        width: 300px;
+    }
+    .gloe{
+        margin-right: 3rem;
+    }
+}
+@media (max-width:480px){
+    .client h1{
+font-size: 1.8rem !important;        
+    }
+    .fa h1{
+        font-size: 2rem !important;
+    }
 }
 
 .oli h3 {
@@ -2706,24 +3367,6 @@ button {
     font-size: 20px;
 }
 
-@media (max-width:768px) {
-    .tems h2 {
-        font-size: 10px;
-    }
-
-    .tems {
-        padding: 0;
-    }
-
-    @media(max-width:768px) {
-        #glo {
-            margin: 0 !important;
-            font-size: 1.6rem !important;
-            text-align: center;
-        }
-    }
-}
-
 .siza {
     width: 1880px;
     overflow: hidden;
@@ -2740,11 +3383,7 @@ button {
     .siza {
         width: 100% !important;
         margin: 0;
-
-
     }
-
-    #pj {}
 
     #track {
         width: 100%;
@@ -2913,4 +3552,15 @@ button {
 
 .accordion-item.active .accordion-icon {
     transform: rotate(45deg);
+}
+/* iPad / Tablet View */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* Make navbar full width */
+  #ral {
+    width: 100%;
+    
+  }
+
+  
 }
