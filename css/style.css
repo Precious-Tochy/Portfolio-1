@@ -3532,13 +3532,18 @@ font-size: 1.8rem !important;
     transform: rotate(45deg);
 }
 /* iPad / Tablet View */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* SAFE FIX: Prevent navbar horizontal overflow without changing design */
+#ral {
+    max-width: 100%;
+    overflow-x: clip;
+}
 
-  /* Make navbar full width */
-  #ral {
-    width: 100%;
-    
-  }
+.container-fluid {
+    max-width: 100%;
+    overflow-x: clip;
+}
 
-  
+/* Only prevent screen spill, no visual changes */
+body {
+    overflow-x: hidden;
 }
