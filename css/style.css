@@ -9,12 +9,10 @@ body {
     height: auto;
     background-color: #fff;
     background-image: none;
+     overflow-x: hidden;
 
 }
 
-body {
-    overflow-x: hidden;
-}
 
 body.scrolled {
     background-color: #eceaea;
@@ -82,10 +80,7 @@ body.scrolled {
         margin: 0 !important;
         font-size: 1.8rem !important;
     }
-    nav{
-        width:100% !important;
-        
-    }
+   
 
 }
 
@@ -95,6 +90,13 @@ body.scrolled {
         font-size: 2rem;
         
     }
+    #glo {
+    margin-right: 0 !important; /* remove large spacing */
+}
+
+button {
+    margin-left: 0 !important; /* remove forced spacing */
+}
     
     #clo {
         gap: 0;
