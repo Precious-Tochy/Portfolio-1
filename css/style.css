@@ -82,7 +82,10 @@ body.scrolled {
         margin: 0 !important;
         font-size: 1.8rem !important;
     }
-    
+    nav{
+        width:100% !important;
+        
+    }
 
 }
 
