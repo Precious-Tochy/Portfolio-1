@@ -3532,18 +3532,19 @@ font-size: 1.8rem !important;
     transform: rotate(45deg);
 }
 /* iPad / Tablet View */
-/* SAFE FIX: Prevent navbar horizontal overflow without changing design */
-#ral {
-    max-width: 100%;
-    overflow-x: clip;
-}
+/* === ONLY FIX OVERFLOW (NO STYLE CHANGES) === */
 
-.container-fluid {
+html, body {
     max-width: 100%;
-    overflow-x: clip;
-}
-
-/* Only prevent screen spill, no visual changes */
-body {
     overflow-x: hidden;
+}
+
+/* Prevent navbar from spilling outside screen */
+#ral {
+    max-width: 100vw;
+}
+
+/* Force Bootstrap container not to exceed screen */
+.container-fluid {
+    max-width: 100vw;
 }
