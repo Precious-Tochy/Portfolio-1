@@ -68,66 +68,39 @@ body.scrolled {
     .container-fluid {
         justify-content: space-between !important;
         align-items: center !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 
     button {
-        margin-left: 0 !important;
+        margin: 0 !important;
         display: flex !important;
     }
-
 
     #glo {
         margin: 0 !important;
         font-size: 1.8rem !important;
     }
-   
 
-}
-
-@media (max-width:768px) {
-    #glo {
-       
-        font-size: 2rem;
-        
-    }
-    #glo {
-    margin-right: 0 !important; /* remove large spacing */
-}
-
-button {
-    margin-left: 0 !important; /* remove forced spacing */
-}
-    
     #clo {
         gap: 0;
     }
 
-    button {
-        margin-right: 0;
-    }
-
     #ral {
         border-radius: 0;
+    }
 
-
+    nav {
+        width: 100% !important;
+        border-radius: 15px !important;
     }
 
     #pp {
-        border: #253622;
         filter: brightness(0) invert(1);
     }
 
     #uu {
-        border: #253622;
         font-size: 1.5rem;
-    }
-
-    #uu:hover {
-        border: #253622;
-    }
-    nav{
-    width: 100% !important;
-    border-radius:15px !important;
     }
 }
 
